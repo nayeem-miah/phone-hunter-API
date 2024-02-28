@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <!-- use daisy ui -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h2 class="text-5xl text-gray-600 text-center mt-4">Hunting Phone</h2>
+    </header>
+    <main class="container mx-auto mt-8">
+        <section class="bg-gray-100 m-1 lg:m-4 p-4 rounded">
+            <input type="text" id="search-field" placeholder="search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handlerSearch()" class="btn btn-active btn-accent">search</button>
+
+            <!-- another search option  -->
+            <!-- <input type="text" id="search-field2" placeholder="search here" class="input input-bordered input-primary w-full max-w-xs" />
+            <button onclick="handlerSearch2()" class="btn btn-active btn-neutral">search now</button> -->
+        </section>
+        <!-- search result -->
+        <section>
+            <!-- spinner or loader -->
+            <div id="loading-spinner" class="text-center my-36 hidden">
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+                <!-- <div class="card w-96 bg-gray-100 shadow-xl">
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div> -->
+                  </div>
+                  <!-- show all button  -->
+                  <div id="show-all-container" class="hidden text-center my-8">
+                    <button onclick="handlerShowAll()" class="btn btn-active btn-accent">Show ALL</button>
+                  </div>
+
+            </div>
+        </section>
+        <!--  show details modal -->
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="show-details-phone-name" class="font-bold text-3xl"></h3>
+   <div id="show-details-container">
+     
+   </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-gray-400">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/phone.js"></script>
+</body>
+</html>
