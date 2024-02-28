@@ -98,7 +98,7 @@ const showPhoneDetails = (phone)=>{
     <p><span class="font-bold">memory:</span> ${phone.mainFeatures.memory}</p>
     <p><span class="font-bold">slug:</span> ${phone.slug}</p>
     <p><span class="font-bold">releaseDate:</span> ${phone.releaseDate}</p>
-    <p><span class="font-bold">GPS:</span> ${phone.others.GPS}</p>
+    <p><span class="font-bold">GPS:</span> ${phone.others?.GPS || 'No GPS Available'}</p>
 
 
     `
